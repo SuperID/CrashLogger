@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB53A66A1A765C1900982305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB53A6691A765C1900982305 /* main.m */; };
+		CB53A66D1A765C1900982305 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB53A66C1A765C1900982305 /* AppDelegate.m */; };
+		CB53A6701A765C1900982305 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB53A66F1A765C1900982305 /* ViewController.m */; };
+		CB53A6731A765C1900982305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB53A6711A765C1900982305 /* Main.storyboard */; };
+		CB53A6751A765C1900982305 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB53A6741A765C1900982305 /* Images.xcassets */; };
+		CB53A6781A765C1900982305 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB53A6761A765C1900982305 /* LaunchScreen.xib */; };
+		CB53A6841A765C1900982305 /* CrashLoggerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB53A6831A765C1900982305 /* CrashLoggerDemoTests.m */; };
+		CB53A6921A765C9B00982305 /* CrashLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CB53A6911A765C9B00982305 /* CrashLogger.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB53A67E1A765C1900982305 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB53A65C1A765C1900982305 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB53A6631A765C1900982305;
+			remoteInfo = CrashLoggerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB53A6641A765C1900982305 /* CrashLoggerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashLoggerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB53A6681A765C1900982305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB53A6691A765C1900982305 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB53A66B1A765C1900982305 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB53A66C1A765C1900982305 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB53A66E1A765C1900982305 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CB53A66F1A765C1900982305 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CB53A6721A765C1900982305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB53A6741A765C1900982305 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB53A6771A765C1900982305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CB53A67D1A765C1900982305 /* CrashLoggerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrashLoggerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB53A6821A765C1900982305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB53A6831A765C1900982305 /* CrashLoggerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashLoggerDemoTests.m; sourceTree = "<group>"; };
+		CB53A6901A765C9B00982305 /* CrashLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrashLogger.h; path = ../CrashLogger/CrashLogger.h; sourceTree = "<group>"; };
+		CB53A6911A765C9B00982305 /* CrashLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrashLogger.m; path = ../CrashLogger/CrashLogger.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB53A6611A765C1900982305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB53A67A1A765C1900982305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB53A65B1A765C1900982305 = {
+			isa = PBXGroup;
+			children = (
+				CB53A6931A765CA000982305 /* CrashLogger */,
+				CB53A6661A765C1900982305 /* CrashLoggerDemo */,
+				CB53A6801A765C1900982305 /* CrashLoggerDemoTests */,
+				CB53A6651A765C1900982305 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB53A6651A765C1900982305 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB53A6641A765C1900982305 /* CrashLoggerDemo.app */,
+				CB53A67D1A765C1900982305 /* CrashLoggerDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB53A6661A765C1900982305 /* CrashLoggerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CB53A66B1A765C1900982305 /* AppDelegate.h */,
+				CB53A66C1A765C1900982305 /* AppDelegate.m */,
+				CB53A66E1A765C1900982305 /* ViewController.h */,
+				CB53A66F1A765C1900982305 /* ViewController.m */,
+				CB53A6711A765C1900982305 /* Main.storyboard */,
+				CB53A6741A765C1900982305 /* Images.xcassets */,
+				CB53A6761A765C1900982305 /* LaunchScreen.xib */,
+				CB53A6671A765C1900982305 /* Supporting Files */,
+			);
+			path = CrashLoggerDemo;
+			sourceTree = "<group>";
+		};
+		CB53A6671A765C1900982305 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB53A6681A765C1900982305 /* Info.plist */,
+				CB53A6691A765C1900982305 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB53A6801A765C1900982305 /* CrashLoggerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB53A6831A765C1900982305 /* CrashLoggerDemoTests.m */,
+				CB53A6811A765C1900982305 /* Supporting Files */,
+			);
+			path = CrashLoggerDemoTests;
+			sourceTree = "<group>";
+		};
+		CB53A6811A765C1900982305 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB53A6821A765C1900982305 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB53A6931A765CA000982305 /* CrashLogger */ = {
+			isa = PBXGroup;
+			children = (
+				CB53A6901A765C9B00982305 /* CrashLogger.h */,
+				CB53A6911A765C9B00982305 /* CrashLogger.m */,
+			);
+			name = CrashLogger;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB53A6631A765C1900982305 /* CrashLoggerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB53A6871A765C1900982305 /* Build configuration list for PBXNativeTarget "CrashLoggerDemo" */;
+			buildPhases = (
+				CB53A6601A765C1900982305 /* Sources */,
+				CB53A6611A765C1900982305 /* Frameworks */,
+				CB53A6621A765C1900982305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrashLoggerDemo;
+			productName = CrashLoggerDemo;
+			productReference = CB53A6641A765C1900982305 /* CrashLoggerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB53A67C1A765C1900982305 /* CrashLoggerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB53A68A1A765C1900982305 /* Build configuration list for PBXNativeTarget "CrashLoggerDemoTests" */;
+			buildPhases = (
+				CB53A6791A765C1900982305 /* Sources */,
+				CB53A67A1A765C1900982305 /* Frameworks */,
+				CB53A67B1A765C1900982305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB53A67F1A765C1900982305 /* PBXTargetDependency */,
+			);
+			name = CrashLoggerDemoTests;
+			productName = CrashLoggerDemoTests;
+			productReference = CB53A67D1A765C1900982305 /* CrashLoggerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB53A65C1A765C1900982305 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = GYX;
+				TargetAttributes = {
+					CB53A6631A765C1900982305 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					CB53A67C1A765C1900982305 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CB53A6631A765C1900982305;
+					};
+				};
+			};
+			buildConfigurationList = CB53A65F1A765C1900982305 /* Build configuration list for PBXProject "CrashLoggerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB53A65B1A765C1900982305;
+			productRefGroup = CB53A6651A765C1900982305 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB53A6631A765C1900982305 /* CrashLoggerDemo */,
+				CB53A67C1A765C1900982305 /* CrashLoggerDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB53A6621A765C1900982305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB53A6731A765C1900982305 /* Main.storyboard in Resources */,
+				CB53A6781A765C1900982305 /* LaunchScreen.xib in Resources */,
+				CB53A6751A765C1900982305 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB53A67B1A765C1900982305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB53A6601A765C1900982305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB53A6701A765C1900982305 /* ViewController.m in Sources */,
+				CB53A6921A765C9B00982305 /* CrashLogger.m in Sources */,
+				CB53A66D1A765C1900982305 /* AppDelegate.m in Sources */,
+				CB53A66A1A765C1900982305 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB53A6791A765C1900982305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB53A6841A765C1900982305 /* CrashLoggerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB53A67F1A765C1900982305 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB53A6631A765C1900982305 /* CrashLoggerDemo */;
+			targetProxy = CB53A67E1A765C1900982305 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB53A6711A765C1900982305 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB53A6721A765C1900982305 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB53A6761A765C1900982305 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB53A6771A765C1900982305 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB53A6851A765C1900982305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB53A6861A765C1900982305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB53A6881A765C1900982305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CrashLoggerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CB53A6891A765C1900982305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CrashLoggerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CB53A68B1A765C1900982305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CrashLoggerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrashLoggerDemo.app/CrashLoggerDemo";
+			};
+			name = Debug;
+		};
+		CB53A68C1A765C1900982305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CrashLoggerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrashLoggerDemo.app/CrashLoggerDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB53A65F1A765C1900982305 /* Build configuration list for PBXProject "CrashLoggerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB53A6851A765C1900982305 /* Debug */,
+				CB53A6861A765C1900982305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB53A6871A765C1900982305 /* Build configuration list for PBXNativeTarget "CrashLoggerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB53A6881A765C1900982305 /* Debug */,
+				CB53A6891A765C1900982305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB53A68A1A765C1900982305 /* Build configuration list for PBXNativeTarget "CrashLoggerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB53A68B1A765C1900982305 /* Debug */,
+				CB53A68C1A765C1900982305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB53A65C1A765C1900982305 /* Project object */;
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btD-Jg-f65">
+                                <rect key="frame" x="251" y="175" width="98" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="CQj-mg-dTP"/>
+                                </constraints>
+                                <state key="normal" title="AddHandler">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="add:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="34j-qe-cmh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nak-oh-Ghl">
+                                <rect key="frame" x="238" y="224" width="124" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="psT-DA-ORP"/>
+                                </constraints>
+                                <state key="normal" title="removeHandler">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="remove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zFO-lx-PB0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6m-yG-zJT">
+                                <rect key="frame" x="238" y="282" width="124" height="30"/>
+                                <state key="normal" title="Cash">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cash:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9hQ-4v-OrR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfu-D8-P8H">
+                                <rect key="frame" x="238" y="346" width="124" height="30"/>
+                                <state key="normal" title="getLog">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="get:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H0k-eO-6DK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcM-nl-cae">
+                                <rect key="frame" x="238" y="395" width="124" height="30"/>
+                                <state key="normal" title="deleteLog">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="delete:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YUg-mA-kev"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YcM-nl-cae" firstAttribute="top" secondItem="cfu-D8-P8H" secondAttribute="bottom" constant="19" id="6Zz-lB-Ub0"/>
+                            <constraint firstItem="X6m-yG-zJT" firstAttribute="leading" secondItem="cfu-D8-P8H" secondAttribute="leading" id="Iil-QH-QBF"/>
+                            <constraint firstItem="X6m-yG-zJT" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="LG2-Fl-kC9"/>
+                            <constraint firstItem="X6m-yG-zJT" firstAttribute="top" secondItem="nak-oh-Ghl" secondAttribute="bottom" constant="28" id="LQr-xS-x4v"/>
+                            <constraint firstItem="nak-oh-Ghl" firstAttribute="centerX" secondItem="btD-Jg-f65" secondAttribute="centerX" id="R81-Yk-XJB"/>
+                            <constraint firstItem="nak-oh-Ghl" firstAttribute="trailing" secondItem="X6m-yG-zJT" secondAttribute="trailing" id="UNv-iw-moo"/>
+                            <constraint firstItem="btD-Jg-f65" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="155" id="Ust-pl-Flv"/>
+                            <constraint firstItem="X6m-yG-zJT" firstAttribute="leading" secondItem="nak-oh-Ghl" secondAttribute="leading" id="V7K-O1-k0N"/>
+                            <constraint firstItem="cfu-D8-P8H" firstAttribute="top" secondItem="X6m-yG-zJT" secondAttribute="bottom" constant="34" id="fWA-3Z-aWP"/>
+                            <constraint firstItem="nak-oh-Ghl" firstAttribute="top" secondItem="btD-Jg-f65" secondAttribute="bottom" constant="19" id="hWU-6N-QWY"/>
+                            <constraint firstItem="X6m-yG-zJT" firstAttribute="trailing" secondItem="cfu-D8-P8H" secondAttribute="trailing" id="icS-1G-z4n"/>
+                            <constraint firstItem="YcM-nl-cae" firstAttribute="trailing" secondItem="cfu-D8-P8H" secondAttribute="trailing" id="pae-bB-xYc"/>
+                            <constraint firstItem="YcM-nl-cae" firstAttribute="leading" secondItem="cfu-D8-P8H" secondAttribute="leading" id="qd8-Sn-d5u"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
