@@ -10,6 +10,18 @@
 #import <UIKit/UIDevice.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
+#include <libkern/OSAtomic.h>
+#include <execinfo.h>
+
+NSString * const UncaughtExceptionHandlerSignalExceptionName = @"UncaughtExceptionHandlerSignalExceptionName";
+NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerSignalKey";
+NSString * const UncaughtExceptionHandlerAddressesKey = @"UncaughtExceptionHandlerAddressesKey";
+
+volatile int32_t UncaughtExceptionCount = 0;
+const int32_t UncaughtExceptionMaximum = 10;
+
+const NSInteger UncaughtExceptionHandlerSkipAddressCount = 4;
+const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
 
 NSString *logPathUrl() {
     return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]stringByAppendingPathComponent:@"Exception.txt"];
@@ -50,8 +62,60 @@ void UncaughtExceptionHandler(NSException *exception) {
     [logfile writeToFile:path atomically:YES];
 }
 
+
 @implementation CrashLogger{
     NSUncaughtExceptionHandler *_uncaughtExceptionHandler;
+}
+
++ (NSArray *)backtrace
+{
+    void* callstack[128];
+    int frames = backtrace(callstack, 128);
+    char **strs = backtrace_symbols(callstack, frames);
+    
+    int i;
+    NSMutableArray *backtrace = [NSMutableArray arrayWithCapacity:frames];
+    for (
+         i = UncaughtExceptionHandlerSkipAddressCount;
+         i < UncaughtExceptionHandlerSkipAddressCount +
+         UncaughtExceptionHandlerReportAddressCount;
+         i++)
+    {
+        [backtrace addObject:[NSString stringWithUTF8String:strs[i]]];
+    }
+    free(strs);
+    
+    return backtrace;
+}
+
+void SignalHandler(int signal)
+{
+    int32_t exceptionCount = OSAtomicIncrement32(&UncaughtExceptionCount);
+    if (exceptionCount > UncaughtExceptionMaximum)
+    {
+        return;
+    }
+    
+    NSMutableDictionary *userInfo =
+    [NSMutableDictionary
+     dictionaryWithObject:[NSNumber numberWithInt:signal]
+     forKey:UncaughtExceptionHandlerSignalKey];
+    
+    NSArray *callStack = [CrashLogger backtrace];
+    [userInfo
+     setObject:callStack
+     forKey:UncaughtExceptionHandlerAddressesKey];
+    
+    UncaughtExceptionHandler([NSException
+                              exceptionWithName:UncaughtExceptionHandlerSignalExceptionName
+                              reason:
+                              [NSString stringWithFormat:
+                               NSLocalizedString(@"Signal %d was raised.", nil),
+                               signal]
+                              userInfo:
+                              [NSDictionary
+                               dictionaryWithObject:[NSNumber numberWithInt:signal]
+                               forKey:UncaughtExceptionHandlerSignalKey]]);
 }
 
 + (CrashLogger *)sharedInstance
@@ -89,11 +153,23 @@ void UncaughtExceptionHandler(NSException *exception) {
     }
     
     NSSetUncaughtExceptionHandler (&UncaughtExceptionHandler);
+    signal(SIGABRT, SignalHandler);
+    signal(SIGILL, SignalHandler);
+    signal(SIGSEGV, SignalHandler);
+    signal(SIGFPE, SignalHandler);
+    signal(SIGBUS, SignalHandler);
+    signal(SIGPIPE, SignalHandler);
 }
 
 -(void)remuseHandler
 {
     NSSetUncaughtExceptionHandler (_uncaughtExceptionHandler);
+    signal(SIGABRT, SIG_DFL);
+    signal(SIGILL, SIG_DFL);
+    signal(SIGSEGV, SIG_DFL);
+    signal(SIGFPE, SIG_DFL);
+    signal(SIGBUS, SIG_DFL);
+    signal(SIGPIPE, SIG_DFL);
 }
 
 -(NSDictionary *)getCashLog
