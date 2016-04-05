@@ -123,12 +123,20 @@ void SignalHandler(int signal)
     static CrashLogger*_sharedInstance = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
-        _sharedInstance = [[CrashLogger alloc] init];
+        _sharedInstance = [[CrashLogger alloc] initPrivate];
     });
     return _sharedInstance;
 }
 
 - (instancetype)init
+{
+    @throw [NSException exceptionWithName:@"Do not init CrashLogger"
+                                   reason:@"You should use [CrashLogger sharedInstance]"
+                                 userInfo:nil];
+    return nil;
+}
+
+- (instancetype)initPrivate
 {
     self = [super init];
     if (self) {
